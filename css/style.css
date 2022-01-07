@@ -27,7 +27,27 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #FFFBFB;
 }
 
-.btn, .form-control, .form-select {
+.bg-light-secondary {
+    background-color: #F5F9FC;
+}
+
+.border-light-secondary {
+    border-color: #F5F9FC;
+}
+
+.btn-light:hover {
+    background-color: #d3d8db;
+}
+
+.text-success {
+    color: #10C400 !important;
+}
+
+.shadow {
+    box-shadow: 8px 16px 48px rgba(138, 138, 138, 0.15) !important;
+}
+
+.btn, .form-control, .form-select, .card, .input-group-text {
     border-radius: 8px;
 }
 

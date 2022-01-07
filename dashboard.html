@@ -28,55 +28,55 @@
                 <li class="sidebar-menu-section mt-3">
                     <ul>
                         <li class="rounded-start menu-active">
-                            <a class="d-flex align-items-between" href="/dashboard.html">
+                            <a class="d-flex align-items-between" href="/dashboard.html" title="Dashboard">
                                 <i class="bi bi-speedometer2 me-3 h4"></i>
                                 <p class="mb-0">Dashboard</p>
                             </a>
                         </li>
                         <li class="rounded-start">
-                            <a class="d-flex align-items-between" href="#">
+                            <a class="d-flex align-items-between" href="#" title="Bahan Mentah">
                                 <i class="bi bi-cart4 me-3 h4"></i>
                                 <p class="mb-0">Bahan Mentah</p>
                             </a>
                         </li>
                         <li class="rounded-start">
-                            <a class="d-flex align-items-between" href="#">
+                            <a class="d-flex align-items-between" href="#" title="Bahan Dalam Proses">
                                 <i class="bi bi-cpu me-3 h4"></i>
                                 <p class="mb-0">Bahan Dalam Proses</p>
                             </a>
                         </li>
                         <li class="rounded-start">
-                            <a class="d-flex align-items-between" href="#">
+                            <a class="d-flex align-items-between" href="#" title="Barang Jadi">
                                 <i class="bi bi-bag-check me-3 h4"></i>
                                 <p class="mb-0">Barang Jadi</p>
                             </a>
                         </li>
                         <li class="rounded-start">
-                            <a class="d-flex align-items-between" href="#">
+                            <a class="d-flex align-items-between" href="#" title="Pemasukan">
                                 <i class="bi bi-arrow-down-circle me-3 h4"></i>
                                 <p class="mb-0">Pemasukan</p>
                             </a>
                         </li>
                         <li class="rounded-start">
-                            <a class="d-flex align-items-between" href="#">
+                            <a class="d-flex align-items-between" href="#" title="Pengeluaran">
                                 <i class="bi bi-arrow-up-circle me-3 h4"></i>
                                 <p class="mb-0">Pengeluaran</p>
                             </a>
                         </li>
                         <li class="rounded-start">
-                            <a class="d-flex align-items-between" href="#">
+                            <a class="d-flex align-items-between" href="#" title="Hutang">
                                 <i class="bi bi-emoji-dizzy me-3 h4"></i>
                                 <p class="mb-0">Hutang</p>
                             </a>
                         </li>
                         <li class="rounded-start">
-                            <a class="d-flex align-items-between" href="#">
+                            <a class="d-flex align-items-between" href="#" title="Pengaturan">
                                 <i class="bi bi-gear me-3 h4"></i>
                                 <p class="mb-0">Pengaturan</p>
                             </a>
                         </li>
                         <li class="rounded-start">
-                            <a class="d-flex align-items-between" href="#">
+                            <a class="d-flex align-items-between" href="#" title="Logout">
                                 <i class="bi bi-box-arrow-right me-3 h4"></i>
                                 <p class="mb-0">Logout</p>
                             </a>
@@ -87,14 +87,14 @@
         </div>
 
         <div id="navbar" class="marginLeft">
-            <nav class="navbar navbar-expand-md navbar-light bg-white py-3 sticky-top py-3 border-bottom border-light border-2" style="opacity: .8;">
+            <nav class="navbar navbar-expand-md navbar-light bg-white py-3 sticky-top py-3 border-bottom border-light border-2">
                 <div class="container">
                     <button type="button" class="border-0 me-3 bg-transparent" onclick="return toggleSidebar()">
                         <span class="navbar-toggler-icon mx-3"></span>
                     </button>
                     <div class="d-flex">
                         <small class="me-3 d-none d-md-inline">Selamat datang, <br /><b>Administrator!</b></small>
-                        <a class="btn btn-salmon px-3 py-2 ms-md-3 fw-bold" href="#"><i class="bi bi-card-checklist me-2"></i> Order</a>
+                        <a class="btn btn-salmon px-3 pt-2 ms-md-3 fw-bold" href="#"><i class="bi bi-card-checklist me-2"></i> Order</a>
                     </div>
                     <div class="navbar-nav ms-auto d-flex align-items-center">
                         <form action="#" method="POST">
@@ -104,8 +104,68 @@
                 </div>
             </nav>
         
-            <div>
-                
+            <div class="row p-4 w-100 h-100">
+                <div class="col-md-12">
+                    <h2 class="fw-bold mb-3">Dashboard</h2>
+                    <div class="row mb-5">
+                        <div class="col-md-8">
+                            <small>Cari berdasarkan tanggal</small>
+                            <form action="/dashboard.html" method="POST">
+                                <div class="row g-2">
+                                    <div class="col input-group">
+                                        <div class="input-group-text bg-light-secondary border-light-secondary text-secondary">Dari</div>
+                                        <input type="date" class="form-control py-2 bg-light-secondary border-light-secondary text-secondary" id="tanggal_dari" name="tanggal_dari" placeholder="Dari" title="Dari">
+                                    </div>
+                                    <div class="col input-group">
+                                        <div class="input-group-text bg-light-secondary border-light-secondary text-secondary">Ke</div>
+                                        <input type="date" class="form-control py-2 bg-light-secondary border-light-secondary text-secondary" id="tanggal_ke" name="tanggal_ke" placeholder="Ke" title="Ke">
+                                    </div>
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-outline-salmon px-3 py-2"><i class="bi bi-search me-2"></i> Cari</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card p-2 border-0 shadow mb-3">
+                                <div class="card-body text-center">
+                                    <div class="d-flex align-items-between justify-content-center">
+                                        <i class="bi bi-arrow-down-circle me-2 h4 text-success"></i> 
+                                        <h5 class="fw-bold mb-0">Pemasukan</h5>
+                                    </div>
+                                    <h3 class="py-3">Rp 100.000</h3>
+                                    <a href="#" class=" btn btn-light px-3 text-decoration-none text-secondary"><small>Detail</small></a>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card p-2 border-0 shadow mb-3">
+                                <div class="card-body text-center">
+                                    <div class="d-flex align-items-between justify-content-center">
+                                        <i class="bi bi-arrow-up-circle me-2 h4 text-danger"></i> 
+                                        <h5 class="fw-bold mb-0">Pengeluaran</h5>
+                                    </div>
+                                    <h3 class="py-3">Rp 25.450</h3>
+                                    <a href="#" class=" btn btn-light px-3 text-decoration-none text-secondary"><small>Detail</small></a>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card p-2 border-0 shadow mb-3">
+                                <div class="card-body text-center">
+                                    <div class="d-flex align-items-between justify-content-center">
+                                        <i class="bi bi-emoji-dizzy me-2 h4 text-secondary"></i> 
+                                        <h5 class="fw-bold mb-0">Hutang</h5>
+                                    </div>
+                                    <h3 class="py-3">Rp 14.400</h3>
+                                    <a href="#" class=" btn btn-light px-3 text-decoration-none text-secondary"><small>Detail</small></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
         </div>
